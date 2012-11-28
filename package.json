@@ -1,10 +1,11 @@
 {
   "name": "actualcoderwall.com",
-  "version": "0.0.0",
+  "version": "0.0.0-3",
   "description": "ERROR: No README.md file found!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js"
   },
   "repository": "",
   "author": "wookiehangover",
@@ -24,5 +25,13 @@
   "devDependencies": {
     "grunt-contrib": "~0.3.0",
     "grunt": "~0.3.17"
+  },
+  "subdomain": "actualcoderwall",
+  "domains": [
+    "actualcoderwall.com",
+    "www.actualcoderwall.com"
+  ],
+  "engines": {
+    "node": "0.8.x"
   }
 }

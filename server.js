@@ -1,9 +1,9 @@
 var http = require('http');
 var ramrod = require('ramrod');
 var request = require('request');
-var decorator = require('decorator');
 var ecstatic = require('ecstatic');
 var path = require('path');
+var decorator = require('./decorator');
 
 var ec = ecstatic( path.resolve(__dirname) );
 
