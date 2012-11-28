@@ -1,0 +1,33 @@
+<%- include _header.ejs %>
+<%- include _nav.ejs %>
+
+<section class="profile">
+
+<h1><% if(profile_url){ %><a href="<%= profile_url%>"><% } %><%= username %><% if(profile_url){ %></a><% } %></h1>
+
+<% badges && badges.forEach(function(badge, i){ %>
+
+<% if( i % 4 === 0 ){ %>
+  <div class="row">
+  <% } %>
+
+  <div class="span3">
+    <img src="<%= badge.badge %>" rel="tooltip" title="<%= badge.name %> - <%= badge.description %>" />
+  </div>
+
+  <% var j = i + 1; if( j === badges.length || j % 4 === 0 ){ %>
+  </div>
+  <% } %>
+<% }); %>
+
+</section>
+
+<%- include _endscripts.ejs %>
+<script src="/assets/js/bootstrap-tooltip.js"></script>
+<script>
+  jQuery(function($){
+    $('[rel="tooltip"]').tooltip();
+  });
+</script>
+<%- include _footer.ejs %>
+
