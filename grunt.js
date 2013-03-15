@@ -79,12 +79,13 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         node: true,
-        jQuery: true,
-        expr: true
+        expr: true,
+        strict: false
       },
       globals: {
         Modernizr: true,
         define: true,
+        jQuery: true,
         $: true
       }
     },

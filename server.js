@@ -9,7 +9,11 @@ var ec = ecstatic( path.resolve(__dirname) );
 
 var router = ramrod();
 
-router.add('', function(req, res){
+router.add('', function(req, res, params){
+
+  if(params && params.username && /^[\w\.?]+$/.test(params.username) ){
+    return res.redirect('/'+params.username);
+  }
   res.template('index.ejs', {});
 });
 
